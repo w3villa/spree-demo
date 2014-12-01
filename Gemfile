@@ -25,7 +25,8 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
-
+gem 'puma'
+gem 'rvm-capistrano'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -42,3 +43,8 @@ gem 'spring',        group: :development
 gem 'spree', "2.4.0.rc3"
 gem 'spree_gateway', :git => 'https://github.com/spree/spree_gateway.git', :branch => '2-4-stable'
 gem 'spree_auth_devise', :git => 'https://github.com/spree/spree_auth_devise.git', :branch => '2-4-stable'
+
+group :development do
+  gem 'capistrano', '2.15.5'
+  gem 'capistrano-unicorn', :require => false
+end
